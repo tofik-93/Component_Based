@@ -12,7 +12,7 @@ const App: React.FC = () => {
           value={125000}
           change={12.5}      
           format="currency"
-        />
+        />         
         <AnalyticsCard
           title="Conversion Rate"
           value={24.5}       
