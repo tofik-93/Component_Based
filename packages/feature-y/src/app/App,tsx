@@ -1,0 +1,44 @@
+import { DataCard, DataTable } from './features/data-display'
+import { ProfileForm, AvatarUpload } from './features/user-profile'
+
+export function App() {
+  const sampleData = [
+    { id: 1, name: 'Item 1', value: 100, updatedAt: new Date('2023-05-01') },
+    { id: 2, name: 'Item 2', value: 200, updatedAt: new Date('2023-05-15') },
+  ]
+
+  return (
+    <div className="p-8 max-w-4xl mx-auto">
+      <h1 className="text-2xl font-bold mb-8">Feature Y Dashboard</h1>
+      
+      <section className="mb-8">
+        <h2 className="text-xl font-semibold mb-4">Data Display</h2>
+        <div className="grid grid-cols-2 gap-4 mb-6">
+          <DataCard 
+            title="Total Items" 
+            value={sampleData.length} 
+            lastUpdated={new Date()} 
+          />
+          <DataCard 
+            title="Total Value" 
+            value={sampleData.reduce((sum, item) => sum + item.value, 0)} 
+            lastUpdated={new Date()} 
+          />
+        </div>
+        <DataTable data={sampleData} columns={['id', 'name', 'value']} />
+      </section>
+
+      <section>
+        <h2 className="text-xl font-semibold mb-4">User Profile</h2>
+        <div className="flex gap-8">
+          <div className="flex-1">
+            <ProfileForm />
+          </div>
+          <div className="flex-1">
+            <AvatarUpload />
+          </div>
+        </div>
+      </section>
+    </div>
+  )
+}
