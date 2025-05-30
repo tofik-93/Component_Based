@@ -15,7 +15,7 @@ const App: React.FC = () => {
         />
         <AnalyticsCard
           title="Conversion Rate"
-          value={24.5}
+          value={24.5}       
           change={-2.1}
           format="percentage"
         />
