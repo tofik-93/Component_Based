@@ -8,7 +8,7 @@ const App: React.FC = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
         <AnalyticsCard
-          title="Total Sales"   
+          title="Total Sales"      
           value={125000}
           change={12.5}      
           format="currency"
