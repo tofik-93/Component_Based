@@ -3,14 +3,14 @@ import { LeadCard, AnalyticsCard } from "@salesflow/ui-components";
 
 const App: React.FC = () => {
   return (
-    <div className="p-8 max-w-4xl mx-auto">
+    <div className="p-8 max-w-4xl mx-auto">  
       <h1 className="text-3xl font-bold mb-8">SalesFlow Demo</h1>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
         <AnalyticsCard
-          title="Total Sales"
+          title="Total Sales"   
           value={125000}
-          change={12.5}
+          change={12.5}      
           format="currency"
         />
         <AnalyticsCard
@@ -23,10 +23,10 @@ const App: React.FC = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <LeadCard
-          name="John Doe"
-          status="qualified"
+          name="John Doe"  
+          status="qualified"  
           email="john@example.com"
-          company="Tech Corp"
+          company="Tech Corp"  
           value={50000}
           lastContact="2024-03-15"
         />
